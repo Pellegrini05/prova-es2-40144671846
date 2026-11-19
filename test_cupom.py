@@ -17,3 +17,9 @@ def test_rejeita_percentual_zero():
     percentual = 0
     resultado = desconto_valido(percentual)
     assert resultado is False
+
+
+def test_rejeita_percentual_fracionario_dentro_do_limite():
+    percentual = 25.5
+    resultado = desconto_valido(percentual)
+    assert resultado is False
